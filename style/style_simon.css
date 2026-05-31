@@ -1,0 +1,157 @@
+/* VARIABLES */
+
+:root {
+  --color1: red;
+}
+
+/* Reset */
+
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0;
+}
+
+h1, p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+/* Layout */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100dvh;
+  max-width: 100dvw;
+  margin-inline: auto;
+}
+
+button {
+  border-radius: 1rem;
+  background: #EEE;
+
+  &:hover {
+    background: #EEE;
+  }
+}
+
+.blink {
+  filter: brightness(1.75);
+  transform: scale(1.1);
+}
+
+/* Header */
+
+.page_header {
+  text-align: center;
+  background: #BBB;
+
+  h1 {
+    padding: 1rem;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+}
+
+/* Main */
+
+.page_content {
+  margin-block: auto;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+
+  background: #AAA;
+  border-radius: .5rem;
+
+  .game {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    gap: 1rem;
+    padding: 1rem;
+
+    background: #CCC;
+    border-radius: .5rem;
+
+    .colorBtn {
+      padding: 3rem;
+    }
+
+    .colorBtn-Green {
+      background: limegreen;
+
+      &:hover {
+        transform: scale(.9);
+      }
+    }
+
+    .colorBtn-Red {
+      background: rgb(224, 26, 26);
+
+      &:hover {
+        transform: scale(.9);
+      }
+    }
+
+    .colorBtn-Yellow {
+      background: rgb(214, 214, 20);
+
+      &:hover {
+        transform: scale(.9);
+      }
+    }
+
+    .colorBtn-Blue {
+      background: steelblue;
+
+      &:hover {
+        transform: scale(.9);
+      }
+    }
+  }
+
+  .startBtn {
+    align-self: unset;
+    margin-block-start: 5rem;
+    padding-block: 3rem;
+
+    &:hover {
+      transform: scale(.9);
+    }
+  }
+
+  .resetBtn {
+    align-self: unset;
+    margin-block-start: 1rem;
+    padding-block: 3rem;
+
+    &:hover {
+      transform: scale(.9);
+    }
+  }
+
+  p {
+    margin-block-start: 1rem;
+    align-self: center;
+  }
+}
+
+/* Footer */
+
+.page_footer {
+  text-align: center;
+  background: #BBB;
+  padding: 1rem;
+}
